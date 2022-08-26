@@ -45,32 +45,33 @@ books.sort((a, b) => {
 //Card
 
 let grabU1 = document.querySelector(".book-list", "display-flex")
+grabU1.classList.add("book-list")
 
 books.forEach(ele => {
   let bookItem = document.createElement("div")
   bookItem.classList.add("card", "book")
 
   let cardImg = document.createElement("img")
-  cardImg.classList.add("card-img-top")
+  cardImg.classList.add("card-img-top", "book-cover")
   cardImg.src = ele.img
 
   let cardBody = document.createElement("div")
   cardBody.classList.add("card-body")
 
   let h5 = document.createElement("h5")
-  h5.classList.add("card-text")
+  h5.classList.add("card-title")
   h5.textContent = ele.title
   
   let p = document.createElement("p")
-  p.classList.add("card-text")
+  p.classList.add("card-text", "text-secondary")
   p.textContent = reverseName(ele.author)
 
   let cardFooter = document.createElement("div")
-  cardFooter.classList.add("card-body-two")
+  cardFooter.classList.add("card-body-two","bg-warning")
 
   let link =document.createElement("div")
   let read = document.createElement("span")
-  read.classList.add("badge", "bg-secondary", "status")
+  read.classList.add("badge", "bg-secondary", "status", "ms-5")
 link.classList.add("card-link")
 
 read.textContent= "To Read"
